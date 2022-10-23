@@ -1,0 +1,3 @@
+name: pulumi-aws-lambda-express-exchange-rates
+runtime: nodejs
+description: Currency exchange Express API using openexchangerates.org on AWS Lambda, deployed with Pulumi
