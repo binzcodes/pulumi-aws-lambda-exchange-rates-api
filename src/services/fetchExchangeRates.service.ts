@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const config = JSON.parse(process?.env?.PULUMI_CONFIG || '{}');
-
-const OER_APP_ID = config['project:oerAppId'] || 'default';
+import { OER_APP_ID } from '../../config';
 
 export const getRates = async () => {
   try {
