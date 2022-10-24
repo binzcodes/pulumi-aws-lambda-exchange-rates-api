@@ -1,6 +1,6 @@
-# Minimal AWS serverless Express DynamoDB API
+# Pulumi Exchange Rate Express API Service - Lambda
 
-A minimal serverless [Express](https://expressjs.com/) API template using Pulumi's cloud.HttpServer built on AWS API Gateway and Lambda functions, serving a dynamic DynamoDB-based hit counter.
+An exchange rate API service using Pulumi's cloud.HttpServer built on AWS API Gateway and Lambda functions.
 
 ## Run
 
@@ -14,7 +14,7 @@ pulumi up
 
 # Test the endpoint:
 pulumi stack select
-for i in {1..5}; do curl $(pulumi stack output url); done
+curl -H "Content-type: application/json" -d '{ GBP: 100 }' $(pulumi stack output url)/USD
 
 # Clean up resources:
 pulumi destroy
@@ -44,4 +44,3 @@ pulumi stack rm
 - Pulumi cloud.HttpServer
 - AWS Lambda
 - AWS API Gateway
-- AWS DynamoDB
