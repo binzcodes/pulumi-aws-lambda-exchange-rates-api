@@ -21,7 +21,7 @@
     "msw": "^0.47.4",
     "prettier": "^2.6.2",
     "supertest": "^7.0.0",
-    "ts-jest": "^29.0.3"
+    "ts-jest": "^29.2.5"
   },
   "dependencies": {
     "@pulumi/awsx": "^0.40.0",
